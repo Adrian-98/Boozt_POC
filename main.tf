@@ -8,7 +8,7 @@ resource "google_storage_bucket" "statebucket" {
   public_access_prevention = "enforced"
 }
 
-resource "google_storage_bucket" "statebucket" {
+resource "google_storage_bucket" "statebucket2" {
   name          = "bucket-121q32e3223"
   location      = var.region
   project       = var.project
