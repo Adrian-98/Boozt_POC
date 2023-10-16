@@ -53,3 +53,15 @@ resource "google_compute_firewall" "fw_iap" {
     ports     =  [ "22" ]
   }
 }
+
+resource "google_compute_firewall" "fw_iap" {
+  name          = "allow-tcp-22"
+  project       = var.project
+  direction     = "INGRESS"
+  network       = google_compute_network.poc_network.id
+  source_ranges = ["35.235.240.0/20"]
+  allow {
+    protocol = "tcp"
+    ports     =  [ "443" ]
+  }
+}
