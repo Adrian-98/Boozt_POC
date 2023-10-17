@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
     hostname     = "app.terraform.io"
-    organization = "Devoteam-G-Cloud"
+    organization = "POC_sentinel_boozt"
     workspaces {
       name = "Boozt_POC"
     }
