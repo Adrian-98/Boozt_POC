@@ -1,6 +1,6 @@
 //Creating a bucket 
 resource "google_storage_bucket" "statebucket" {
-  name          = "bucket-12123"
+  name          = "bucket-tfstate"
   location      = var.region
   project       = var.project
   storage_class = "STANDARD"
