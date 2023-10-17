@@ -3,5 +3,5 @@ variable "project" {
 }
 
 variable "region" {
-  default = "eurpe-north1"
+  default = "europe-north1"
 }
