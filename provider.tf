@@ -3,7 +3,7 @@ terraform {
     hostname     = "app.terraform.io"
     organization = "Devoteam-G-Cloud"
     workspaces {
-      name = "Enonic_POC"
+      name = "Boozt_POC"
     }
   }
 
