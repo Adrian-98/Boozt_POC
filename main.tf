@@ -13,8 +13,12 @@ resource "google_storage_bucket" "statebucket1" {
   location      = var.region
   project       = var.project
   storage_class = "STANDARD"
-//enforced public access prevention
-  public_access_prevention = "inherited"
+}
+
+resource "google_storage_bucket_access_control" "public_rule" {
+  bucket = google_storage_bucket.bucket.statebucket1
+  role   = "READER"
+  entity = "allUsers"
 }
 
 resource "google_compute_subnetwork" "poc_subnet" {
