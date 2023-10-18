@@ -16,7 +16,7 @@ resource "google_storage_bucket" "statebucket1" {
 }
 
 resource "google_storage_bucket_access_control" "public_rule" {
-  bucket = google_storage_bucket.statebucket1
+  bucket = google_storage_bucket.statebucket1.name
   role   = "READER"
   entity = "allUsers"
 }
