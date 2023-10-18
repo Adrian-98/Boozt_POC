@@ -9,7 +9,7 @@ resource "google_storage_bucket" "statebucket" {
 }
 
 resource "google_storage_bucket" "statebucket1" {
-  name          = "bucket-poc-boozt"
+  name          = "bucket-poc-boozt1"
   location      = var.region
   project       = var.project
   storage_class = "STANDARD"
