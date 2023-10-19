@@ -8,19 +8,6 @@ resource "google_storage_bucket" "statebucket" {
   public_access_prevention = "enforced"
 }
 
-resource "google_storage_bucket" "statebucket1" {
-  name          = "bucket-poc-boozt1"
-  location      = var.region
-  project       = var.project
-  storage_class = "STANDARD"
-}
-
-resource "google_storage_bucket_access_control" "public_rule" {
-  bucket = google_storage_bucket.statebucket1.name
-  role   = "READER"
-  entity = "allUsers"
-}
-
 resource "google_compute_subnetwork" "poc_subnet" {
   name          = "subnetwork-poc"
   project       = var.project
